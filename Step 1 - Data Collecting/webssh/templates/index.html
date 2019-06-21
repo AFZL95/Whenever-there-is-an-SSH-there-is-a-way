@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title> WebSSH </title>
+    <link href="static/img/favicon.png" rel="icon" type="image/png">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/xterm.min.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/fullscreen.min.css" rel="stylesheet" type="text/css"/>
+    
+  </head>
+  <body  style=" display: block;  margin-left: 39%; background-color:#FFCC02">
+      <form id="connect" action="" method="post" enctype="multipart/form-data"{% if debug %} novalidate{% end %}>
+	  <div><img style= "margin-top: 5%;margin-left:3%;" src="static/img/MTNi.png"type="image/png" ></div>
+            <label style="margin-top:10px; color: #006890;font-weight:bold;" for="Hostname">Hostname</label>
+            <input style="width: 34%;" class="form-control" type="text" id="hostname" name="hostname" value="" required >
+            <label style="margin-top:10px; color: #006890;font-weight:bold;" for="Port">Port</label>
+            <input style="width: 34%;" class="form-control" type="number" id="port" name="port" placeholder="22" value="" min=1 max=65535>
+            <label style="margin-top:10px; color: #006890;font-weight:bold;" for="Username">Username</label>
+            <input style="width: 34%;" class="form-control" type="text" id="username"  name="username" value="" required>
+            <label style="margin-top:10px; color: #006890;font-weight:bold;" for="Password">Password</label>
+            <input  style="width: 34%;" class="form-control" type="password" id="password" name="password" value="">
+        {% module xsrf_form_html() %}
+        <button style= "margin-top: 1%;margin-left: 9%"  type="submit" class="btn btn-primary">Connect</button>
+        <button style= "margin-top: 1%"  type="reset" class="btn btn-danger">Reset</button>
+      </form>
+
+
+    <div class="container">
+      
+      <div id="terminal" name="terminal"></div>
+    </div>
+
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/xterm.min.js"></script>
+    <script src="static/js/fullscreen.min.js"></script>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>
