@@ -95,7 +95,7 @@ def login_and_scp(element_ip_address,element_name):
     # doing the stuff for the Huawei Pool
     TypeInXpath('//*[@id="terminal"]/div','ll hwlte_*\n')
     time.sleep(1)
-    TypeInXpath('//*[@id="terminal"]/div','tmp_name_H=`ls hwlte_* | head -1`\n')
+    TypeInXpath('//*[@id="terminal"]/div','tmp_name_H=`ls hwlte_* | tail -1`\n')
     time.sleep(1)
     TypeInXpath('//*[@id="terminal"]/div','var_H="$Ip_name$Now$tmp_name_H"\n')
     time.sleep(1)
@@ -110,7 +110,7 @@ def login_and_scp(element_ip_address,element_name):
     # doing the stuff for the Ericsson Pool
     TypeInXpath('//*[@id="terminal"]/div','ll hwlte_*\n')
     time.sleep(1)
-    TypeInXpath('//*[@id="terminal"]/div','tmp_name_E=`ls mvericlte_* | head -1`\n')
+    TypeInXpath('//*[@id="terminal"]/div','tmp_name_E=`ls mvericlte_* | tail -1`\n')
     time.sleep(1)
     TypeInXpath('//*[@id="terminal"]/div','var_E="$Ip_name$Now$tmp_name_E"\n')
     time.sleep(1)
@@ -122,10 +122,13 @@ def login_and_scp(element_ip_address,element_name):
     TypeInXpath('//*[@id="terminal"]/div', CEMPassword+'\n')
     time.sleep(3)
 
-    # end of tehe process #
+    # exit the Superuser of the CMA
     TypeInXpath('//*[@id="terminal"]/div','exit\n')
     time.sleep(1)
     
+    # Exit the CMA SSH connection itself
+    TypeInXpath('//*[@id="terminal"]/div','exit\n')
+    time.sleep(1)
 
 # Login to PLatform		
 def login_to_server(browser):
