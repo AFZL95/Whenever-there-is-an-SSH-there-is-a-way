@@ -1,6 +1,7 @@
 # Whenever there is an SSH, there is a way
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b31e31c476ef4b8c880aaf6b75ec72a6)](https://app.codacy.com/app/AFZL95/Whenever-there-is-an-SSH-there-is-a-way?utm_source=github.com&utm_medium=referral&utm_content=AFZL95/Whenever-there-is-an-SSH-there-is-a-way&utm_campaign=Badge_Grade_Dashboard)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b31e31c476ef4b8c880aaf6b75ec72a6)](https://app.codacy.com/app/AFZL95/Whenever-there-is-an-SSH-there-is-a-way?utm_source=github.com&utm_medium=referral&utm_content=AFZL95/Whenever-there-is-an-SSH-there-is-a-way&utm_campaign=Badge_Grade_Dashboard)
 
 This Repo, is about demonstrating a little bit about my new challenges which I faced in Huawei Technologies <br> As a Data Analyst. Demontration video can be found at [here](https://youtu.be/CPJiGVyM63k).
 
